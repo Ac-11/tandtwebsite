@@ -41,7 +41,7 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kennedy Avenue, Amritsar, Punjab</small>
                     <small class="me-3 text-light">
                         <i class="fa fa-phone-alt me-2"></i>
                         <a href="tel:+919356347823" style="text-decoration: none; color: inherit;">+91 9356347823</a>
@@ -118,7 +118,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+                <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4">Book Now</a>
+                
+                  
             </div>
         </nav>
 
@@ -273,7 +275,7 @@
 
 
     <!-- Destination Start -->
-    <div class="container-xxl py-5 destination">
+    <div id="destination" class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
@@ -286,21 +288,21 @@
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/destination-1.jpg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Thailand</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Golden Temple</div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/destination-2.jpg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Malaysia</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Jallianwala bagh</div>
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
                             <a class="position-relative d-block overflow-hidden" href="">
                                 <img class="img-fluid" src="img/destination-3.jpg" alt="">
                                 <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Australia</div>
+                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Attari - Wagah Border</div>
                             </a>
                         </div>
                     </div>
@@ -309,7 +311,7 @@
                     <a class="position-relative d-block h-100 overflow-hidden" href="">
                         <img class="img-fluid position-absolute w-100 h-100" src="img/destination-4.jpg" alt="" style="object-fit: cover;">
                         <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Indonesia</div>
+                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Akal Takht Sahib</div>
                     </a>
                 </div>
             </div>
@@ -319,7 +321,7 @@
 
 
     <!-- Package Start -->
-    <div class="container-xxl py-5">
+    <div id="pack" class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
@@ -427,39 +429,39 @@
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form>
+                        <form id="bookingForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" required />
                                         <label for="datetime">Date & Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
+                                        <select class="form-select bg-transparent" id="select1" required>
+                                            <option value="Destination 1">Destination 1</option>
+                                            <option value="Destination 2">Destination 2</option>
+                                            <option value="Destination 3">Destination 3</option>
                                         </select>
                                         <label for="select1">Destination</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px" required></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
@@ -468,16 +470,35 @@
                                 </div>
                             </div>
                         </form>
+                        <script>
+                            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const datetime = document.getElementById('datetime').value;
+                                const destination = document.getElementById('select1').value;
+                                const message = document.getElementById('message').value;
+                                const whatsappMessage = `Hello! Swagat Tours and Travel. 
+    Name: ${name}
+    Email: ${email}
+    Date & Time: ${datetime}
+    Destination: ${destination}
+    Special Request: ${message}`;
+                                const whatsappUrl = `https://wa.me/9356347823?text=${encodeURIComponent(whatsappMessage)}`;
+                                window.open(whatsappUrl, '_blank');
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Booking Start -->
 
 
     <!-- Process Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Process</h6>
@@ -519,12 +540,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Process Start -->
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Travel Guide</h6>
@@ -597,12 +618,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div id="test" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
@@ -613,25 +634,25 @@
                     <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">John Doe</h5>
                     <p>New York, USA</p>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Swagat Tour and Travel made our family vacation a dream come true. We visited Amritsar, Chandigarh, and other nearby locations, and every aspect of our trip was meticulously planned. The accommodations were comfortable, and the transportation was smooth and timely. Special thanks to the team for making our trip hassle-free and enjoyable. We'll definitely book with them again</p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
                     <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">John Doe</h5>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mt-2 mb-0">I had an amazing experience with Swagat Tour and Travel! From the moment we arrived in Amritsar, everything was perfectly organized. Our guide was incredibly knowledgeable and friendly, making our trip through Punjab's historical sites unforgettable. The attention to detail and personalized service truly set Swagat apart. Highly recommended for anyone looking to explore Punjab!</p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
                     <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">John Doe</h5>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mt-2 mb-0">I booked a tour with Swagat Tour and Travel for a group of friends, and we were all extremely impressed. The itinerary was well-planned, covering major attractions and hidden gems. Our guide's passion for local culture and history enriched our experience. The service was excellent, and the trip offered great value for money. We'll definitely choose Swagat again for our next adventure!"</p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
                     <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
                     <h5 class="mb-0">John Doe</h5>
                     <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mt-2 mb-0">Swagat Tour and Travel exceeded my expectations in every way. From the Golden Temple in Amritsar to the scenic beauty of Punjab's countryside, every part of the tour was exceptional. The staff were professional and went out of their way to accommodate our needs. I can't thank them enough for such a memorable trip. Swagat is definitely my go-to travel company in Punjab!</p>
                 </div>
             </div>
         </div>
@@ -644,24 +665,26 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Company</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                    <h4 class="text-white mb-3">Links</h4>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="#service">Services</a>
+                    <a class="btn btn-link" href="#destination">Destination</a>
+                    <a class="btn btn-link" href="#pack">Packages</a>
+                    <a class="btn btn-link" href="#test">Testimonial</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <h4 class="text-white mb-3">Visit Us</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Kennedy Avenue, Amritsar, Punjab</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.739982322096!2d74.86089802443097!3d31.64096894117591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964a4d8d12ec9%3A0x71b804714e1386a7!2sKennedy%20Avenue%2C%20Amritsar%2C%20Punjab%20143001!5e0!3m2!1sen!2sin!4v1716436499607!5m2!1sen!2sin" 
+                    width="250" height="107" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Gallery</h4>
@@ -700,19 +723,19 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="index.html">Swagat Tours & Travel</a>, All Right Reserved.
 
                     
-                        Designed By <a class="border-bottom" href="#">Coding Home</a>
+                        <!-- Designed By <a class="border-bottom" href="#">Abhisth Chatterji</a> -->
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
+                    <!-- <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <a href="">Home</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
