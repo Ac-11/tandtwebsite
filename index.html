@@ -41,21 +41,20 @@
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kennedy Avenue, Amritsar, Punjab</small>
+                    <!-- <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kennedy Avenue, Amritsar, Punjab</small> -->
                     <small class="me-3 text-light">
-                        <i class="fa fa-phone-alt me-2"></i>
-                        <a href="tel:+919356347823" style="text-decoration: none; color: inherit;">+91 9356347823</a>
+                        <a href="tel:+919356347823" style="text-decoration: none; color: inherit;"><i class="fa fa-phone-alt me-2"></i></a>
                       </small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i></small>
                 </div>
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a> -->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a> -->
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a> -->
                 </div>
             </div>
         </div>
@@ -118,8 +117,9 @@
                         </div>
                     </div>
                 </div>
-                <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4">Book Now</a>
-                
+                <!-- <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4">Book Now</a> -->
+                <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4" style="font-size: 14px;">Book Now</a>
+
                   
             </div>
         </nav>
@@ -131,15 +131,27 @@
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Swagat Tours & Travel</h1>
                         <p class="fs-4 text-white mb-4 animated slideInDown">Explore Amritsar's charm a journey into Punjab's rich heritage and traditions</p>
                         <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Golden Temple">
+                            <input id="searchInput" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Explore: Golden Temple">
                             <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">
                                 Contact
-                              </a>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <script>
+            const touristPlaces = ['Golden Temple', 'Jallianwala Bagh', 'Wagah Border', 'Durgiana Temple', 'Partition Museum'];
+            let currentIndex = 0;
+            const searchInput = document.getElementById('searchInput');
+        
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % touristPlaces.length;
+                searchInput.placeholder = `Explore: ${touristPlaces[currentIndex]}`;
+            }, 1000);
+        </script>
+        
     </div>
     <!-- Navbar & Hero End -->
 
@@ -281,42 +293,67 @@
                 <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
                 <h1 class="mb-5">Popular Destination</h1>
             </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-1.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Golden Temple</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-2.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">25% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Jallianwala bagh</div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/destination-3.jpg" alt="">
-                                <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">35% OFF</div>
-                                <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Attari - Wagah Border</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/destination-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
-                        <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Akal Takht Sahib</div>
+            <style>
+                .no-gutters {
+                    margin-right: -15px;
+                    margin-left: -15px;
+                }
+                .no-gutters [class^='col-'], .no-gutters [class*=' col-'] {
+                    padding-right: 15px;
+                    padding-left: 15px;
+                }
+            </style>
+            
+            <div class="row no-gutters g-3">
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/destination-1.jpg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Golden Temple</div>
                     </a>
                 </div>
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/d2.jpeg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Jallianwala Bagh</div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/d3.jpg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Gobindgarh Fort</div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/d4.jpg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Attari - Wagah Border</div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/d5.jpg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Dalhousie</div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 wow zoomIn" data-wow-delay="0.1s">
+                    <a class="position-relative d-block overflow-hidden" href="" style="position: relative; display: block;">
+                        <img class="img-fluid" src="img/d6.jpg" alt="" style="position: relative; width: 100%;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0));"></div>
+                        <div class="text-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="position: absolute; bottom: 0; right: 0; z-index: 2;">Shimla</div>
+                    </a>
+                </div>
+                
+                
             </div>
+            
         </div>
     </div>
+    
     <!-- Destination Start -->
 
 
@@ -631,28 +668,28 @@
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mb-0">Swagat Tour and Travel made our family vacation a dream come true. We visited Amritsar, Chandigarh, and other nearby locations, and every aspect of our trip was meticulously planned. The accommodations were comfortable, and the transportation was smooth and timely. Special thanks to the team for making our trip hassle-free and enjoyable. We'll definitely book with them again</p>
+                    <!-- <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;"> -->
+                    <!-- <h5 class="mb-0">John Doe</h5> -->
+                    <p>Harpreet, Mumbai</p>
+                    <p class="mb-0">Swagat Tour and Travel made our family vacation a dream come true. We visited Amritsar, Chandigarh, and other nearby locations, and every aspect of our trip was meticulously planned.</p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">I had an amazing experience with Swagat Tour and Travel! From the moment we arrived in Amritsar, everything was perfectly organized. Our guide was incredibly knowledgeable and friendly, making our trip through Punjab's historical sites unforgettable. The attention to detail and personalized service truly set Swagat apart. Highly recommended for anyone looking to explore Punjab!</p>
+                    <!-- <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;"> -->
+                    <!-- <h5 class="mb-0">John Doe</h5> -->
+                    <p>Kiran, Kolkata</p>
+                    <p class="mt-2 mb-0">I had an amazing experience with Swagat Tour and Travel! From the moment we arrived in Amritsar, everything was perfectly organized and very well meticulously planned. </p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">I booked a tour with Swagat Tour and Travel for a group of friends, and we were all extremely impressed. The itinerary was well-planned, covering major attractions and hidden gems. Our guide's passion for local culture and history enriched our experience. The service was excellent, and the trip offered great value for money. We'll definitely choose Swagat again for our next adventure!"</p>
+                    <!-- <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;"> -->
+                    <!-- <h5 class="mb-0">John Doe</h5> -->
+                    <p>Nitin, Lucknow</p>
+                    <p class="mt-2 mb-0">I booked a tour with Swagat Tour and Travel for a group of friends, and we were all extremely impressed. The itinerary was well-planned, covering major attractions and hidden gems."</p>
                 </div>
                 <div class="testimonial-item bg-white text-center border p-4">
-                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">John Doe</h5>
-                    <p>New York, USA</p>
-                    <p class="mt-2 mb-0">Swagat Tour and Travel exceeded my expectations in every way. From the Golden Temple in Amritsar to the scenic beauty of Punjab's countryside, every part of the tour was exceptional. The staff were professional and went out of their way to accommodate our needs. I can't thank them enough for such a memorable trip. Swagat is definitely my go-to travel company in Punjab!</p>
+                    <!-- <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;"> -->
+                    <!-- <h5 class="mb-0">John Doe</h5> -->
+                    <p>Jasleen, Bengaluru</p>
+                    <p class="mt-2 mb-0">Swagat Tour and Travel exceeded my expectations in every way. From the Golden Temple in Amritsar to the scenic beauty of Punjab's countryside, every part of the tour was exceptional.</p>
                 </div>
             </div>
         </div>

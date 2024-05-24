@@ -67,10 +67,10 @@
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
-    margin-right: 25px;
-    padding: 35px 0;
+    margin-right: 15px;
+    padding: 15px 0;
     color: #FFFFFF !important;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     outline: none;
     transition: .5s;
@@ -295,7 +295,7 @@
     left: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgb(252, 247, 247) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
 }
 
@@ -326,12 +326,13 @@
 
 .testimonial-carousel .owl-item .testimonial-item,
 .testimonial-carousel .owl-item.center .testimonial-item * {
-    transition: .5s;
+    transition: .01s;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
     background: var(--primary) !important;
-    border-color: var(--primary) !important;
+    border-radius: 10px; /* Adjust border-radius as needed */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item * {
@@ -353,7 +354,7 @@
     height: 15px;
     border: 1px solid #CCCCCC;
     border-radius: 15px;
-    transition: .5s;
+    transition: .1s;
 }
 
 .testimonial-carousel .owl-dot.active {
