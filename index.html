@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -37,28 +37,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <!-- <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Kennedy Avenue, Amritsar, Punjab</small> -->
-                    <small class="me-3 text-light">
-                        <a href="tel:+919356347823" style="text-decoration: none; color: inherit;"><i class="fa fa-phone-alt me-2"></i></a>
-                      </small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i></small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a> -->
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a> -->
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a> -->
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Topbar End -->
 
 
@@ -66,28 +45,17 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-                <!-- <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Tourit</h1> -->
-                <img src="img/logo.jpg" alt="Logo"> 
+                <img src="img/logo.png" alt="Logo"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
+                <div class="navbar-nav me-auto py-0">
                     <a href="" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Car Rentals</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="destination.html" class="dropdown-item">Destination</a>
-                            <a href="booking.html" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Travel Guides</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tempo Travellers</a>
                         <div class="dropdown-menu m-0">
                             <a href="destination.html" class="dropdown-item">Destination</a>
                             <a href="booking.html" class="dropdown-item">Booking</a>
@@ -117,13 +85,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4">Book Now</a> -->
-                <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4" style="font-size: 14px;">Book Now</a>
-
-                  
+                <div class="d-flex align-items-center">
+                    <a href="https://wa.me/9356347823" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:9356347823" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                        <i class="fa fa-phone"></i>
+                    </a>
+                    <a href="mailto:info@swagat.com" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4" style="font-size: 14px; background-color: transparent; color: var(--primary); border: 2px solid var(--primary);">
+                        Book Now
+                    </a>
+                </div>
             </div>
         </nav>
-
+    
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
@@ -140,7 +118,7 @@
                 </div>
             </div>
         </div>
-        
+    
         <script>
             const touristPlaces = ['Golden Temple', 'Jallianwala Bagh', 'Wagah Border', 'Durgiana Temple', 'Partition Museum'];
             let currentIndex = 0;
@@ -151,8 +129,9 @@
                 searchInput.placeholder = `Explore: ${touristPlaces[currentIndex]}`;
             }, 1000);
         </script>
-        
+    
     </div>
+    
     <!-- Navbar & Hero End -->
 
 

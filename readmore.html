@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #86B817;
+            --secondary: #FE8800;
+            --light: #F5F5F5;
+            --dark: #14141F;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin: 0 1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 10px;
+            background-color: var(--secondary);
+            color: #FFFFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-size: 1.5rem;
+            margin-right: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary);
+        }
+
+        .destination-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .destination-item img {
+            width: 100%;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s;
+        }
+
+        .destination-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .destination-details {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .destination-details h2 {
+            font-size: 1.75rem;
+            color: var(--dark);
+            margin: 0.5rem 0;
+        }
+
+        .destination-details p {
+            font-size: 1rem;
+            color: var(--dark);
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            transition: .5s;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #FFFFFF;
+            align-self: start;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: darken(var(--primary), 10%);
+        }
+
+        .footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 5px 0;
+            text-align: center;
+            border-top: 1px solid var(--primary);
+            width: 100%;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: var(--light);
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color .3s;
+        }
+
+        .footer a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a href="#" class="btn-back"><i class="fas fa-arrow-left"></i></a>
+            <h1>Destination</h1>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/d2.jpeg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Alcatraz Island</h2>
+                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/d2.jpeg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Alcatraz Island</h2>
+                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/d2.jpeg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Alcatraz Island</h2>
+                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
+                <a href="#" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <!-- Repeat destination-item for more destinations if needed -->
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Made with love</p>
+            <div>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

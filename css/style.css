@@ -6,6 +6,8 @@
     --dark: #14141F;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -22,11 +24,9 @@
     z-index: 99;
 }
 
- 
-
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     transition: .5s;
 }
@@ -62,10 +62,9 @@
     border-radius: 0px;
 }
 
-
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     position: relative;
     margin-right: 15px;
     padding: 15px 0;
@@ -155,19 +154,41 @@
     }
 }
 
-
 /*** Hero Header ***/
+@keyframes backgroundChange {
+    0%, 25% {
+        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg-hero.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    25.01%, 50% {
+        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50.01%, 75% {
+        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    75.01%, 100% {
+        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgggg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
 .hero-header {
-    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/bg-hero.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    animation: backgroundChange 10s infinite;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
-
 
 /*** Section Title ***/
 .section-title {
@@ -208,7 +229,6 @@
     left: 0;
 }
 
-
 /*** Service ***/
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
@@ -227,7 +247,6 @@
     color: var(--light) !important;
 }
 
-
 /*** Destination ***/
 .destination img {
     transition: .5s;
@@ -236,7 +255,6 @@
 .destination a:hover img {
     transform: scale(1.1);
 }
-
 
 /*** Package ***/
 .package-item {
@@ -251,7 +269,6 @@
     transform: scale(1.1);
 }
 
-
 /*** Booking ***/
 .booking {
     background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/booking.jpg);
@@ -259,7 +276,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 /*** Team ***/
 .team-item {
@@ -285,7 +301,6 @@
     background: var(--primary);
     color: #FFFFFF;
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel::before {
@@ -361,7 +376,6 @@
     background: var(--primary);
     border-color: var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
