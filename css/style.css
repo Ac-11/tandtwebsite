@@ -183,7 +183,7 @@
 }
 
 .hero-header {
-    animation: backgroundChange 10s infinite;
+    animation: backgroundChange 5s infinite;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -230,7 +230,7 @@
 }
 
 /*** Service ***/
-.service-item {
+/* .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
     transition: .5s;
 }
@@ -245,7 +245,7 @@
 
 .service-item:hover * {
     color: var(--light) !important;
-}
+} */
 
 /*** Destination ***/
 .destination img {
