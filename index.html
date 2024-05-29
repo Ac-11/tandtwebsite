@@ -45,7 +45,7 @@
 
    
     <style>
-         :root {
+        :root {
             --primary: #86B817;
             --secondary: #FE8800;
             --light: #F5F5F5;
@@ -115,32 +115,38 @@
             margin: 10px 0;
         }
 
+        .btn-group {
+            display: flex;
+            justify-content: center;
+        }
+
         .package-item .btn {
-            margin: 10px;
             padding: 10px 20px;
-            border-radius: 30px;
+            border: 2px solid var(--primary);
             color: var(--primary);
             background-color: transparent;
-            border: 2px solid var(--primary);
             text-decoration: none;
             transition: background-color 0.3s, color 0.3s;
+            border-radius: 0;
+            flex: 1;
             display: inline-block;
+        }
+
+        .package-item .btn:first-child {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .package-item .btn:last-child {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-left: none;
         }
 
         .package-item .btn:hover {
             background-color: var(--secondary);
             color: #fff;
             border-color: var(--secondary);
-        }
-
-        .package-item .btn-read-more {
-            border-radius: 30px 0 0 30px;
-            border-right: none;
-        }
-
-        .package-item .btn-book-now {
-            border-radius: 0 30px 30px 0;
-            border-left: none;
         }
 
         .owl-dots {
@@ -163,40 +169,28 @@
         }
 
         @media (max-width: 768px) {
-            .package-item .btn {
-                display: block;
-                width: 100%;
-                margin: 5px 0;
+            .btn-group {
+                flex-direction: column;
             }
 
-            .package-item .btn-read-more,
-            .package-item .btn-book-now {
+            .package-item .btn {
                 border-radius: 30px;
                 border: 2px solid var(--primary);
-                border-left: none;
-                border-right: none;
+                border-top: none;
+                border-bottom: none;
+                flex: none;
             }
-        }
-        .owl-dots {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .owl-dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            margin: 5px;
-            background-color: #ddd;
-            border-radius: 50%;
-            transition: background-color 0.3s;
-        }
-        .owl-dot.active {
-            background-color: var(--primary);
-        }
-        .description {
-            font-size: 14px;
-            color: #777;
-            margin: 10px 0;
+
+            .package-item .btn:first-child {
+                border-radius: 30px 30px 0 0;
+                border-top: 2px solid var(--primary);
+            }
+
+            .package-item .btn:last-child {
+                border-radius: 0 0 30px 30px;
+                border-bottom: 2px solid var(--primary);
+                border-left: 2px solid var(--primary);
+            }
         }
         .testimonial-item {
             box-shadow: none !important;
@@ -496,54 +490,54 @@
                     <img class="img-fluid" src="img/Honda Amaze.png" alt="Honda Amaze">
                     <div class="location"><i class="fa fa-car"></i>Honda Amaze</div>
                     <p class="description">Rent a Honda Amaze for a comfortable journey.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Swift Dzire.png" alt="Swift Dzire">
                     <div class="location"><i class="fa fa-car"></i>Swift Dzire</div>
                     <p class="description">Rent a Swift Dzire for a smooth ride.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Toyota Etios.png" alt="Toyota Etios">
                     <div class="location"><i class="fa fa-car"></i>Toyota Etios</div>
                     <p class="description">Rent a Toyota Etios for reliability.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Crysta Innova.png" alt="Innova Crysta">
                     <div class="location"><i class="fa fa-car"></i>Innova Crysta</div>
                     <p class="description">Rent a Crysta Innova for luxury travel.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Innova.png" alt="Innova">
                     <div class="location"><i class="fa fa-car"></i>Innova</div>
                     <p class="description">Rent an Innova for spacious comfort.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/fortuner.png" alt="Fortuner">
                     <div class="location"><i class="fa fa-car"></i>Fortuner</div>
                     <p class="description">Rent a Fortuner for an adventurous ride.</p>
-                    <div>
-                        <a href="#" class="btn btn-read-more">Read More</a>
-                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    <div class="btn-group">
+                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -578,8 +572,6 @@
             });
         });
     </script>
-    </body>
-    </html>
     <!-- Package End -->
     <!-- outsttaon -->
     <div id="packageCarousel" >
