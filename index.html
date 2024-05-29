@@ -45,13 +45,43 @@
 
    
     <style>
-          :root {
-            --primary: #28a745;
-            --secondary: #fe8800;
+         :root {
+            --primary: #86B817;
+            --secondary: #FE8800;
+            --light: #F5F5F5;
+            --dark: #14141F;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin: 0 1rem;
+        }
+
         .package-item {
             background-color: #fff;
             border: 1px solid #ddd;
@@ -61,20 +91,30 @@
             text-align: center;
             padding: 15px;
         }
+
         .package-item img {
             width: 100%;
             height: auto;
             border-bottom: 1px solid #ddd;
         }
+
         .package-item .location {
             padding: 10px;
             font-size: 14px;
             color: #555;
         }
+
         .package-item .location i {
             color: #007bff;
             margin-right: 5px;
         }
+
+        .package-item .description {
+            font-size: 14px;
+            color: #777;
+            margin: 10px 0;
+        }
+
         .package-item .btn {
             margin: 10px;
             padding: 10px 20px;
@@ -84,11 +124,58 @@
             border: 2px solid var(--primary);
             text-decoration: none;
             transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
         }
+
         .package-item .btn:hover {
             background-color: var(--secondary);
             color: #fff;
             border-color: var(--secondary);
+        }
+
+        .package-item .btn-read-more {
+            border-radius: 30px 0 0 30px;
+            border-right: none;
+        }
+
+        .package-item .btn-book-now {
+            border-radius: 0 30px 30px 0;
+            border-left: none;
+        }
+
+        .owl-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .owl-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background-color: #ddd;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .owl-dot.active {
+            background-color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .package-item .btn {
+                display: block;
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .package-item .btn-read-more,
+            .package-item .btn-book-now {
+                border-radius: 30px;
+                border: 2px solid var(--primary);
+                border-left: none;
+                border-right: none;
+            }
         }
         .owl-dots {
             text-align: center;
@@ -398,7 +485,7 @@
 
     <!-- Package Start -->
     
-    <div id="packageCarousel" >
+    <div id="packageCarousel" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mb-5">
                 <h6 class="section-title bg-white text-primary px-3">Car Rentals</h6>
@@ -406,47 +493,65 @@
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Honda Amaze.png" alt="Thailand">
+                    <img class="img-fluid" src="img/Honda Amaze.png" alt="Honda Amaze">
                     <div class="location"><i class="fa fa-car"></i>Honda Amaze</div>
-                    <p class="description">Rent a Honda Amaze for comfort journey.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <p class="description">Rent a Honda Amaze for a comfortable journey.</p>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Swift Dzire.png" alt="Indonesia">
+                    <img class="img-fluid" src="img/Swift Dzire.png" alt="Swift Dzire">
                     <div class="location"><i class="fa fa-car"></i>Swift Dzire</div>
                     <p class="description">Rent a Swift Dzire for a smooth ride.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Toyota Etios.png" alt="Malaysia">
+                    <img class="img-fluid" src="img/Toyota Etios.png" alt="Toyota Etios">
                     <div class="location"><i class="fa fa-car"></i>Toyota Etios</div>
                     <p class="description">Rent a Toyota Etios for reliability.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Crysta Innova.png" alt="Japan">
+                    <img class="img-fluid" src="img/Crysta Innova.png" alt="Innova Crysta">
                     <div class="location"><i class="fa fa-car"></i>Innova Crysta</div>
                     <p class="description">Rent a Crysta Innova for luxury travel.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Innova.png" alt="India">
+                    <img class="img-fluid" src="img/Innova.png" alt="Innova">
                     <div class="location"><i class="fa fa-car"></i>Innova</div>
                     <p class="description">Rent an Innova for spacious comfort.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/fortuner.png" alt="France">
+                    <img class="img-fluid" src="img/fortuner.png" alt="Fortuner">
                     <div class="location"><i class="fa fa-car"></i>Fortuner</div>
                     <p class="description">Rent a Fortuner for an adventurous ride.</p>
-                    <a href="#" class="btn">Book Now</a>
+                    <div>
+                        <a href="#" class="btn btn-read-more">Read More</a>
+                        <a href="#" class="btn btn-book-now">Book Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
         new WOW().init();
@@ -458,11 +563,23 @@
                 autoplay: true,
                 autoplayTimeout: 1500,
                 autoplayHoverPause: false,
-                stagePadding: 0,
-                margin: 30
+                margin: 30,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
             });
         });
     </script>
+    </body>
+    </html>
     <!-- Package End -->
     <!-- outsttaon -->
     <div id="packageCarousel" >
