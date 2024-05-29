@@ -1,4 +1,7 @@
-/********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
 :root {
     --primary: #86B817;
     --secondary: #FE8800;
@@ -6,8 +9,31 @@
     --dark: #14141F;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/*** Initial background setting for hero-header ***/
+/*** Initial background setting for hero-header ***/
 
+
+@keyframes backgroundChange {
+    0%, 25% {
+        background-image: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg-hero.jpg);
+    }
+    25%, 50% {
+        background-image: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg.png);
+    }
+    50%, 75% {
+        background-image: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgg.png);
+    }
+    75%, 100% {
+        background-image: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgggg.png);
+    }
+} 
+.hero-header {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundChange 5s infinite; 
+}
 .fw-medium {
     font-weight: 600 !important;
 }
@@ -155,37 +181,6 @@
 }
 
 /*** Hero Header ***/
-@keyframes backgroundChange {
-    0%, 25% {
-        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg-hero.jpg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    25.01%, 50% {
-        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bg.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    50.01%, 75% {
-        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgg.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    75.01%, 100% {
-        background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(/img/bgggg.png);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-}
-
-.hero-header {
-    animation: backgroundChange 5s infinite;
-}
-
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
@@ -229,24 +224,6 @@
     left: 0;
 }
 
-/*** Service ***/
-/* .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.service-item:hover {
-    background: var(--primary);
-}
-
-.service-item * {
-    transition: .5s;
-}
-
-.service-item:hover * {
-    color: var(--light) !important;
-} */
-
 /*** Destination ***/
 .destination img {
     transition: .5s;
@@ -261,13 +238,13 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 }
 
-.package-item img {
+/* .package-item img {
     transition: .5s;
 }
 
 .package-item:hover img {
     transform: scale(1.1);
-}
+} */
 
 /*** Booking ***/
 .booking {

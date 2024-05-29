@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination Page</title>
+    <title>Tour Packages</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -45,14 +45,16 @@
             margin: 0 1rem;
         }
 
+        
         .btn-back {
             display: inline-block;
             padding: 10px;
-            background-color: var(--secondary);
-            color: #FFFFFF;
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
             font-size: 1.5rem;
             margin-right: 10px;
             width: 40px;
@@ -69,7 +71,7 @@
         .destination-item {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            margin-bottom: 6rem;
         }
 
         .destination-item:nth-child(even) {
@@ -82,11 +84,6 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s;
-        }
-
-        .destination-item:hover img {
-            transform: scale(1.1);
         }
 
         .destination-details {
@@ -114,20 +111,19 @@
             font-weight: 600;
             transition: .5s;
             padding: 0.5rem 1rem;
-            border: none;
+            border: 2px solid var(--primary);
             border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
-            color: #FFFFFF;
+            color: var(--primary);
+            background-color: transparent;
             align-self: start;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
+            margin-top: 1rem;
         }
 
         .btn-primary:hover {
-            background-color: darken(var(--primary), 10%);
+            border-color: var(--secondary); /* Change border color to orange on hover */
+            color: var(--secondary); /* Change text color to orange on hover */
         }
 
         .footer {
@@ -168,37 +164,57 @@
 
     <div class="container">
         <div class="header">
-            <a href="#" class="btn-back"><i class="fas fa-arrow-left"></i></a>
-            <h1>Destination</h1>
+            <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i></a>
+            <h1>Tour Packages</h1>
         </div>
         <div class="destination-item">
             <div style="flex: 1; padding: 2rem;">
-                <img src="img/d2.jpeg" alt="Destination Image">
+                <img src="img/amritsar.jpg" alt="Destinatio Image">
             </div>
             <div class="destination-details" style="flex: 1;">
-                <h2>Alcatraz Island</h2>
-                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
-                <a href="#" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-        <div class="destination-item">
-            <div style="flex: 1; padding: 2rem;">
-                <img src="img/d2.jpeg" alt="Destination Image">
-            </div>
-            <div class="destination-details" style="flex: 1;">
-                <h2>Alcatraz Island</h2>
-                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
-                <a href="#" class="btn btn-primary">Book Now</a>
+                <h2>Amritsar Tours</h2>
+                <p></p>If you are looking for cab services to explore Amritsar, Swagat Tours and Travels offers the best cab rental services in your city. Avail of our services, and we assure you a safe, comfortable, and enjoyable journey. Booking a cab in Amritsar is simple and convenient. You can book cab services at the best fares available. Swagat Tours and Travels offers the most reliable services. Whether you're visiting the Golden Temple, Jallianwala Bagh, or other local attractions, our cabs will ensure you travel in comfort and style.
+                <a href="index.html#boog" class="btn btn-primary">Book Now</a>
             </div>
         </div>
         <div class="destination-item">
             <div style="flex: 1; padding: 2rem;">
-                <img src="img/d2.jpeg" alt="Destination Image">
+                <img src="img/gurudwara.jpg" alt="Destination Image">
             </div>
             <div class="destination-details" style="flex: 1;">
-                <h2>Alcatraz Island</h2>
-                <p>Augue sapien in urna cras placerat diam risus tincidunt condimentum vestibulum tellus sed nunc turpis dignissim nec sagittis.</p>
-                <a href="#" class="btn btn-primary">Book Now</a>
+                <h2>Punjab Gurudwaras Darshan</h2>
+                <p>If you are looking for cab services to explore Amritsar, Swagat Tours and Travels offers the best cab rental services in your city. Avail of our services, and we assure you a safe, comfortable, and enjoyable journey. Booking a cab in Amritsar is simple and convenient. You can book cab services at the best fares available. Swagat Tours and Travels offers the most reliable services.Whether you're visiting the Golden Temple, Jallianwala Bagh, or other local attractions, our cabs will ensure you travel in comfort and style.</p>
+                <a href="index.html#boog" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/himachal.jpg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Himachal Tours</h2>
+                <p>If you are looking for cab services to explore Himachal Pradesh, Swagat Tours and Travels offers the best cab rental services in your city. Avail of our services, and we assure you a safe, comfortable, and enjoyable journey. Booking a cab in Himachal Pradesh is simple and convenient. You can book cab services at the best fares available. Swagat Tours and Travels offers the most reliable services. At Swagat Tours and Travels Car Booking, you have the option to choose from a variety of cars to suit your needs.</p>
+                <a href="index.html#boog" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/Vaishno_devi.jpg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Devi Darshan Tours</h2>
+                <p>Swagat Tours and Travels is a leading cab company in Amritsar, allowing guests to book cabs from Amritsar to Kashmir for a memorable Devi Darshan in just a few clicks. Trust Swagat Tours and Travels for affordable and best-in-class Amritsar to Kashmir Car Rentals service. Swagat Tours and Travels offers a wide range of vehicle options from which you can choose your preferred Amritsar to Kashmir car, considering your budget and group size.</p>
+                <a href="index.html#boog" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+        <div class="destination-item">
+            <div style="flex: 1; padding: 2rem;">
+                <img src="img/kashmir2.jpg" alt="Destination Image">
+            </div>
+            <div class="destination-details" style="flex: 1;">
+                <h2>Kashmir Tour Package</h2>
+                <p>Swagat Tours and Travels is a leading cab company in Amritsar, allowing guests to book cabs from Amritsar to Kashmir in just a few clicks. Trust Swagat Tours and Travels for affordable and best-in-class Amritsar to Kashmir Car Rentals service. Swagat Tours and Travels offers a wide range of vehicle options from which you can choose your preferred Amritsar to Kashmir car, considering your budget and group size. Innova, Etios, Swift Dzire are a few of our most popular car models. </p>
+                <a href="index.html#boog" class="btn btn-primary">Book Now</a>
             </div>
         </div>
         <!-- Repeat destination-item for more destinations if needed -->
@@ -206,7 +222,7 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>Made with love</p>
+            <p>© Swagat Tours & Travel, All Right Reserved.</p>
             <div>
                 <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
