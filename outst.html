@@ -45,7 +45,6 @@
             margin: 0 1rem;
         }
 
-        
         .btn-back {
             display: inline-block;
             padding: 10px;
@@ -158,6 +157,63 @@
         .footer a:hover {
             color: var(--primary);
         }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+                margin: 1rem 0;
+            }
+
+            .btn-back {
+                margin: 0 auto 1rem;
+            }
+
+            .destination-item {
+                flex-direction: column;
+                margin-bottom: 3rem;
+            }
+
+            .destination-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .destination-details {
+                padding: 1rem;
+            }
+
+            .destination-details h2 {
+                font-size: 1.5rem;
+            }
+
+            .destination-details p {
+                font-size: 0.875rem;
+            }
+
+            .btn {
+                font-size: 0.875rem;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer p {
+                margin-bottom: 0.5rem;
+            }
+
+            .footer a {
+                margin: 0 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -253,9 +309,7 @@
             </div>
             <div class="destination-details" style="flex: 1;">
                 <h2>Kashmir</h2>
-                <p>Swagat Tours and Travels is a leading cab company in Amritsar, allowing guests to book cabs from Amritsar to Kashmir in just a few clicks. Trust Swagat Tours and Travels for affordable and best-in-class Amritsar to Kashmir Car Rentals service. Swagat Tours and Travels offers a wide range of vehicle options from which you can choose your preferred Amritsar to Kashmir car, considering your budget and group size. Innova, Etios, Swift Dzire are a few of our most popular car models.
-
-                </p>
+                <p>Swagat Tours and Travels is a leading cab company in Amritsar, allowing guests to book cabs from Amritsar to Kashmir in just a few clicks. Trust Swagat Tours and Travels for affordable and best-in-class Amritsar to Kashmir Car Rentals service. Swagat Tours and Travels offers a wide range of vehicle options from which you can choose your preferred Amritsar to Kashmir car, considering your budget and group size. Innova, Etios, Swift Dzire are a few of our most popular car models.</p>
                 <a href="index.html#boog" class="btn btn-primary">Book Now</a>
             </div>
         </div>

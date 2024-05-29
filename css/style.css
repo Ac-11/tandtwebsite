@@ -182,7 +182,7 @@
 
 /*** Hero Header ***/
 .breadcrumb-item + .breadcrumb-item::before {
-    color: rgba(255, 255, 255, .5);
+    color: rgb(255, 255, 255);
 }
 
 /*** Section Title ***/
