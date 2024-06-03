@@ -46,152 +46,132 @@
    
     <style>
         :root {
-            --primary: #86B817;
-            --secondary: #FE8800;
-            --light: #F5F5F5;
-            --dark: #14141F;
-        }
+    --primary: #ffc200;
+    --secondary: #001d42;
+    --light: #f5f5f500;
+    --dark: #14141F;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+body {
+    font-family: 'Poppins';
+    background-color: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            flex: 1;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 1;
+}
 
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
-        .header h1 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin: 0 1rem;
-        }
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin: 0 1rem;
+}
 
-        .package-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 15px;
-        }
+.package-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
 
-        .package-item img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
-        }
+.package-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
 
-        .package-item .location {
-            padding: 10px;
-            font-size: 14px;
-            color: #555;
-        }
+.package-item .location {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+}
 
-        .package-item .location i {
-            color: #007bff;
-            margin-right: 5px;
-        }
+.package-item .location i {
+    color: #007bff;
+    margin-right: 5px;
+}
 
-        .package-item .description {
-            font-size: 14px;
-            color: #777;
-            margin: 10px 0;
-        }
+.package-item .description {
+    font-size: 14px;
+    color: #777;
+    margin: 10px 0;
+}
 
-        .btn-group {
-            display: flex;
-            justify-content: center;
-        }
+.btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Add space between buttons */
+}
 
-        .package-item .btn {
-            padding: 10px 20px;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background-color: transparent;
-            text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 0;
-            flex: 1;
-            display: inline-block;
-        }
+.package-item .btn {
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    margin: 5px; /* Add margin for space between buttons */
+    border-radius: 30px; /* Fully rounded corners */
+    width: calc(50% - 20px); /* Adjust width to fit two buttons in a row with spacing */
+}
 
-        .package-item .btn:first-child {
-            border-top-left-radius: 30px;
-            border-bottom-left-radius: 30px;
-        }
+.package-item .btn:hover {
+    background-color: var(--secondary);
+    color: #fff;
+    border-color: var(--secondary);
+}
 
-        .package-item .btn:last-child {
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            border-left: none;
-        }
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
 
-        .package-item .btn:hover {
-            background-color: var(--secondary);
-            color: #fff;
-            border-color: var(--secondary);
-        }
+.owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
 
-        .owl-dots {
-            text-align: center;
-            margin-top: 20px;
-        }
+.owl-dot.active {
+    background-color: var(--primary);
+}
 
-        .owl-dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            margin: 5px;
-            background-color: #ddd;
-            border-radius: 50%;
-            transition: background-color 0.3s;
-        }
+@media (max-width: 768px) {
+    .btn-group {
+        flex-direction: column;
+    }
 
-        .owl-dot.active {
-            background-color: var(--primary);
-        }
+    .package-item .btn {
+        width: 100%; /* Make buttons full-width */
+        margin: 10px 0; /* Add margin to separate buttons */
+    }
+}
 
-        @media (max-width: 768px) {
-            .btn-group {
-                flex-direction: column;
-            }
 
-            .package-item .btn {
-                border-radius: 30px;
-                border: 2px solid var(--primary);
-                border-top: none;
-                border-bottom: none;
-                flex: none;
-            }
-
-            .package-item .btn:first-child {
-                border-radius: 30px 30px 0 0;
-                border-top: 2px solid var(--primary);
-            }
-
-            .package-item .btn:last-child {
-                border-radius: 0 0 30px 30px;
-                border-bottom: 2px solid var(--primary);
-                border-left: 2px solid var(--primary);
-            }
-        }
         .testimonial-item {
             box-shadow: none !important;
             transition: none !important;
@@ -231,7 +211,7 @@
                     <a href="" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <div class="nav-item dropdown">
-                        <a href="car_rental.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Car Rentals</a>
+                        <a href="car_rental.html" class="nav-link dropdown-toggle">Car Rentals</a>
                         <div class="dropdown-menu m-0">
                             <a href="car_rental.html" class="dropdown-item">Honda Amaze</a>
                             <a href="car_rental.html" class="dropdown-item">Swift Dzire</a>
@@ -242,7 +222,7 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Outstation Taxi</a>
+                        <a href="outst.html" class="nav-link dropdown-toggle">Outstation Taxi</a>
                         <div class="dropdown-menu m-0">
                             <a href="outst.html" class="dropdown-item">Chandigarh Taxi</a>
                             <a href="outst.html" class="dropdown-item">Ludhiana Taxi</a>
@@ -256,7 +236,7 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Packages</a>
+                        <a href="pack.html" class="nav-link dropdown-toggle">Packages</a>
                         <div class="dropdown-menu m-0">
                             <a href="pack.html" class="dropdown-item">Amritsar Tours</a>
                             <a href="pack.html" class="dropdown-item">Punjab Gurudwaras Darshan</a>
@@ -267,16 +247,16 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="https://wa.me/9356347823" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                    <a href="https://wa.me/8288922794" class="btn btn-link text-decoration-none" style="font-size: 20px;">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="tel:9356347823" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                    <a href="tel:8288922794" class="btn btn-link text-decoration-none" style="font-size: 20px;">
                         <i class="fa fa-phone"></i>
                     </a>
-                    <a href="mailto:info@swagat.com" class="btn btn-link text-decoration-none" style="font-size: 20px;">
+                    <a href="mailto:swagattourstravelamritsar@gmail.com" class="btn btn-link text-decoration-none" style="font-size: 20px;">
                         <i class="fa fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4" style="font-size: 14px; background-color: transparent; color: var(--primary); border: 2px solid var(--primary);">
+                    <a href="https://wa.me/8288922794?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4" style="font-size: 14px; background-color: transparent; color: var(--primary); border: 2px solid var(--primary);">
                         Book Now
                     </a>
                 </div>
@@ -285,31 +265,40 @@
     
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                <div class="row justify-content-start py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5">
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Swagat Tours & Travel</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Explore Amritsar's charm a journey into Punjab's rich heritage and traditions</p>
-                        <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <input id="searchInput" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Explore: Golden Temple">
-                            <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">
-                                Contact
+                        <p class="fs-4 text-white mb-4 animated slideInDown">A safe, secure and guided experience awaits you!</p>
+                        <div class="animated slideInDown">
+                            <a href="https://wa.me/9356347823?text=Hello%20!%20Swagat%20Tours%20and%20Travel" class="btn check-availability-btn">
+                                Check Availability
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <script>
-            const touristPlaces = ['Golden Temple', 'Jallianwala Bagh', 'Wagah Border', 'Durgiana Temple', 'Partition Museum'];
-            let currentIndex = 0;
-            const searchInput = document.getElementById('searchInput');
         
-            setInterval(() => {
-                currentIndex = (currentIndex + 1) % touristPlaces.length;
-                searchInput.placeholder = `Explore: ${touristPlaces[currentIndex]}`;
-            }, 1000);
-        </script>
+        <style>
+            .check-availability-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 2px solid white;
+                border-radius: 5px;
+                background-color: white;
+                color: black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+        
+            .check-availability-btn:hover {
+                background-color: transparent;
+                color: white;
+                border-color: white;
+            }
+        </style>
+        
+        
     
     </div>
     
@@ -365,7 +354,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Our Services</h1>
+                <h1 class="mb-5">Your Safety, Our Priority</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -479,70 +468,59 @@
 
     <!-- Package Start -->
     
-    <div id="packageCarousel" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div id="outstationCarousel" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mb-5">
-                <h6 class="section-title bg-white text-primary px-3">Car Rentals</h6>
+                <h6 class="section-title bg-white text-primary px-3" style="margin-top: 30px;">Car Rentals</h6>
                 <h1 class="mb-5">Popular Cars</h1>
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Honda Amaze.png" alt="Honda Amaze">
+                    <img class="img-fluid" src="img/Honda Amaze.png" alt="Chandigarh">
                     <div class="location"><i class="fa fa-car"></i>Honda Amaze</div>
-                    <p class="description">Rent a Honda Amaze for a comfortable journey.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Swift Dzire.png" alt="Swift Dzire">
                     <div class="location"><i class="fa fa-car"></i>Swift Dzire</div>
-                    <p class="description">Rent a Swift Dzire for a smooth ride.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Toyota Etios.png" alt="Toyota Etios">
                     <div class="location"><i class="fa fa-car"></i>Toyota Etios</div>
-                    <p class="description">Rent a Toyota Etios for reliability.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Crysta Innova.png" alt="Innova Crysta">
                     <div class="location"><i class="fa fa-car"></i>Innova Crysta</div>
-                    <p class="description">Rent a Crysta Innova for luxury travel.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/Innova.png" alt="Innova">
+                    <img class="img-fluid" src="img/Innova.png" alt="Vaishno Devi">
                     <div class="location"><i class="fa fa-car"></i>Innova</div>
-                    <p class="description">Rent an Innova for spacious comfort.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
-                    <img class="img-fluid" src="img/fortuner.png" alt="Fortuner">
-                    <div class="location"><i class="fa fa-car"></i>Fortuner</div>
-                    <p class="description">Rent a Fortuner for an adventurous ride.</p>
-                    <div class="btn-group">
-                        <a href="#" class="btn">Read More</a>
-                        <a href="#" class="btn">Book Now</a>
-                    </div>
+                    <img class="img-fluid" src="img/fortuner.png" alt="Shimla">
+                    <div class="location"><i class="fa fa-car"></i>Toyota Fourtuner</div>
+                    <p class="description">*Actual can var according to Availability</p>
+                    <a href="#" class="btn">Read More</a>
+                    <a href="#" class="btn">Book Now</a>
                 </div>
             </div>
         </div>
     </div>
+    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -572,61 +550,71 @@
             });
         });
     </script>
+    </body>
+    </html>
     <!-- Package End -->
     <!-- outsttaon -->
     <div id="packageCarousel" >
         <div class="container">
             <div class="text-center mb-5">
                 <h6 class="section-title bg-white text-primary px-3" style="margin-top: 30px;">Outstation Taxi</h6>
-                <h1 class="mb-5">Popular Outstations</h1>
+                <h1 class="mb-5">Outside Amritsar Places</h1>
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="package-item">
                     <img class="img-fluid" src="img/chandigarh.jpg" alt="Thailand">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Chandigarh</div>
                     <p class="description">Book a trip from Amritsar to Chandigarh.</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/ludhina.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Ludhiana</div>
                     <p class="description">Amritsar to Ludhiana taxi service</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/dalhousie.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Dalhousie</div>
                     <p class="description">Amritsar dalhousie car rental</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Dharamshala.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Dharamshala</div>
                     <p class="description">Dharamshala Mcleodganj Taxi Rental Service</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/Vaishno_devi.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Vaishno Devi</div>
                     <p class="description">Vaishno Devi Darshan</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/shi.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Shimla</div>
                     <p class="description">Amritsar Shimla Car Hire Service</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/manali.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Manali</div>
                     <p class="description">Car Hire from Amritsar to Manali</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/delhi.png" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Delhi</div>
                     <p class="description">Amritsar Delhi Car on Rent</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
@@ -634,6 +622,7 @@
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Kashmir</div>
                     <p class="description">Taxi Rental service from Amritsar to Kashmir
                     </p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
             </div>
@@ -672,30 +661,35 @@
                     <img class="img-fluid" src="img/amritsar.jpg" alt="Thailand">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Amritsar</div>
                     <p class="description">Book a trip for Amritsar's Tourist Places.</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/gurudwara.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Punjab Gurudwaras</div>
                     <p class="description">A tour to Punjab Gurudwaras</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/himachal.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Dalhousie</div>
                     <p class="description">Amritsar to Himachal car rental</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/devidarshna.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Devi Darshan Tours</div>
                     <p class="description">Devi Darshan Taxi Rental Service</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
                 <div class="package-item">
                     <img class="img-fluid" src="img/kashmir2.jpg" alt="Indonesia">
                     <div class="location"><i class="fa fa-map-marker-alt"></i>Kashmir Tour Packages</div>
                     <p class="description">Tour to Kashmir</p>
+                    <a href="#" class="btn">Read More</a>
                     <a href="#" class="btn">Book Now</a>
                 </div>
             </div>
@@ -740,32 +734,32 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name" required>
+                                        <input type="text" class="form-control bg-white" id="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" required>
+                                        <input type="email" class="form-control bg-white" id="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" required />
+                                        <input type="text" class="form-control bg-white datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" required />
                                         <label for="datetime">Date & Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="select1" placeholder="Destination" required>
-                                        <label for="name">Destination</label>
+                                        <input type="text" class="form-control bg-white" id="select1" placeholder="Destination" required>
+                                        <label for="select1">Destination</label>
                                     </div>
                                 </div>
                 
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px" required></textarea>
+                                        <textarea class="form-control bg-white" placeholder="Special Request" id="message" style="height: 100px" required></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
@@ -797,6 +791,7 @@
             </div>
         </div>
     </div>
+    
     
     <!-- Booking Start -->
 
@@ -1043,7 +1038,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="index.html">Swagat Tours & Travel</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="index.html" style="color: white;">Swagat Tours & Travel</a>, All Right Reserved.
 
                     
                         <!-- Designed By <a class="border-bottom" href="#">Abhisth Chatterji</a> -->

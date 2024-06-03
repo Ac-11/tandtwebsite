@@ -3,8 +3,8 @@
 
 
 :root {
-    --primary: #86B817;
-    --secondary: #FE8800;
+    --primary: #ffc200 ;
+    --secondary: #001d42;
     --light: #F5F5F5;
     --dark: #14141F;
 }
@@ -52,7 +52,7 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-weight: 600;
     transition: .5s;
 }
